@@ -232,6 +232,10 @@ function setupLeadForm(formId, confirmId, fieldKeys) {
       }
       // ============================================================
 
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead');
+      }
+
       confirmMsg.classList.add('is-visible');
       submitBtn.textContent = 'Enviado ✓';
       form.reset();
