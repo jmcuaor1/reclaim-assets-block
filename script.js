@@ -234,6 +234,7 @@ function setupLeadForm(formId, confirmId, fieldKeys) {
 
       if (typeof fbq !== 'undefined') {
         fbq('track', 'Lead');
+        console.log('[Meta Pixel] Evento "Lead" disparado — formulario:', formId); // TEMP: quitar antes de producción
       }
 
       confirmMsg.classList.add('is-visible');
